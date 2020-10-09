@@ -1,13 +1,37 @@
+@import '../../variables.scss';
+
 .flexbox-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
 
-    ul {
-        list-style-type: none;
+    .flexbox-item {
+        width: 500px;
+        border: 2px solid $border;
 
-        li{
-            padding: 0.5em
+        h2, ul, li {
+            padding: 0.5em;
+            margin: 0.5em;
+            text-align: center;
         }
-    }
+        
+        ul {
+            list-style-type: none;
+
+            li{
+                user-select: none;
+                cursor: pointer;
+                color: $primarytext;
+                background-color: $base;
+            
+                &:hover {
+                    background: darken($base, 10%);
+                }
+            }
+        }
+       
+    } 
 }
+
+
+
