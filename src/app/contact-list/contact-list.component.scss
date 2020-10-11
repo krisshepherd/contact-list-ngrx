@@ -4,12 +4,17 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
 
     .flexbox-item {
-        width: 500px;
-        border: 2px solid $border;
+        margin: 0.5em;
 
-        h2, ul, li {
+        .selected {
+            background-color: $primary;
+            border: 1px solid $border;
+        }
+
+        h3, ul, li {
             padding: 0.5em;
             margin: 0.5em;
             text-align: center;
@@ -22,10 +27,9 @@
                 user-select: none;
                 cursor: pointer;
                 color: $primarytext;
-                background-color: $base;
             
                 &:hover {
-                    background: darken($base, 10%);
+                    background: $primary;
                 }
             }
         }

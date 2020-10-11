@@ -2,6 +2,7 @@ import { Contact } from './contact.model';
 
 export const CONTACTS: Contact[] = [
     {
+        id: '1',
         firstname: 'John',
         lastname: 'Doe',
         phone: '00436641122333',
@@ -9,6 +10,7 @@ export const CONTACTS: Contact[] = [
         address: 'Mariahilfer Strasse 23'
     },
     {
+        id: '2',
         firstname: 'Mary',
         lastname: 'Jane',
         phone: '00436641234567',
