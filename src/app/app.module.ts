@@ -9,16 +9,20 @@ import { ContactDetailComponent } from './contact-detail/contact-detail.componen
 import { contactBookReducer } from './store/contact-book.reducers';
 import { environment } from 'src/environments/environment';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { NewContactComponent } from './new-contact/new-contact.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactListComponent,
-    ContactDetailComponent
+    ContactDetailComponent,
+    NewContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     StoreModule.forRoot({contacts: contactBookReducer}),
     StoreDevtoolsModule.instrument({
       maxAge: 25,

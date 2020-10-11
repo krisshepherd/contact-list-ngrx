@@ -1,0 +1,22 @@
+<div class="flexbox-container">
+    <div class="flexbox-item">
+        <h3>New Contact</h3>
+        <label>First Name
+            <input type="text" [(ngModel)]="contact.firstname">
+        </label>
+        <label>Last Name
+            <input type="text" [(ngModel)]="contact.lastname">
+        </label>
+        <label>Phone
+            <input type="text" [(ngModel)]="contact.phone">
+        </label>
+        <label>Email
+            <input type="text" [(ngModel)]="contact.email">
+        </label>
+        <label>Address
+            <input type="text" [(ngModel)]="contact.address">
+        </label>
+        <button routerLink="/contacts"
+                (click)="addContact(contact)">Add</button>
+    </div>
+</div>
