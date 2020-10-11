@@ -3,7 +3,7 @@
     <div class="flexbox-item" id="list">
         <h3>Contact List</h3>
         <ul>
-            <li *ngFor="let contact of contacts" (click)="showContact(contact)"
+            <li *ngFor="let contact of contacts$ | async" (click)="showContact(contact)"
                 [class.selected]="contact === selectedContact">
                 <span>{{contact.firstname}} {{contact.lastname}}</span>
             </li>

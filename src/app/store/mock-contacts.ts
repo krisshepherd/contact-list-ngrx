@@ -1,6 +1,6 @@
 import { Contact } from './contact.model';
 
-export const CONTACTS: Contact[] = [
+export const CONTACTS: Array<Contact> = [
     {
         id: '1',
         firstname: 'John',

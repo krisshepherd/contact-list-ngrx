@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Contact } from './contact.model';
-import { CONTACTS } from './mock-contacts';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { AppState } from '../store/app-state.model';
+import { Contact } from '../store/contact.model';
+import { CONTACTS } from '../store/mock-contacts';
 
 @Component({
   selector: 'app-contact-list',
@@ -9,12 +12,13 @@ import { CONTACTS } from './mock-contacts';
 })
 export class ContactListComponent implements OnInit {
 
-  contacts = CONTACTS;
+  contacts$: Observable<Array<Contact>>;
   selectedContact: Contact;
 
-  constructor() { }
+  constructor(private store: Store<AppState>) { }
 
   ngOnInit(): void {
+    this.contacts$ = this.store.select('contacts')
   }
 
   showContact(contact: Contact): void {
