@@ -5,3 +5,11 @@ export interface Contact {
     email: string;
     address: string;
 }
+
+export const EMPTYCONTACT: Contact = {
+    firstname: '',
+    lastname: '',
+    phone: '',
+    email: '',
+    address: ''
+}

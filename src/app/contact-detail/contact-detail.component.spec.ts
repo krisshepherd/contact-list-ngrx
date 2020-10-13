@@ -5,7 +5,7 @@ import { CONTACTS } from '../store/mock-contacts';
 
 import { ContactDetailComponent } from './contact-detail.component';
 
-fdescribe('ContactDetailComponent', () => {
+describe('ContactDetailComponent', () => {
   let component: ContactDetailComponent;
   let fixture: ComponentFixture<ContactDetailComponent>;
   let contact = CONTACTS[0];
@@ -32,7 +32,7 @@ fdescribe('ContactDetailComponent', () => {
     component.contact = contact;
     fixture.detectChanges();
     const firstname = fixture.debugElement.query(By.css("p:first-child")).nativeElement;
-    expect(firstname.innerHTML).toBe("First Name: " + contact.firstname);
+    expect(firstname.innerHTML).toBe("First Name: " + contact.firstname, 'Unexpected first name value');
   });
 
 });
