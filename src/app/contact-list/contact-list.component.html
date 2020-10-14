@@ -1,0 +1,19 @@
+<div class="flexbox-container">
+
+    <div class="flexbox-item" id="list">
+        <h3>Contact List</h3>
+        <ul>
+            <li *ngFor="let contact of contacts$ | async" (click)="showContact(contact)"
+                [class.selected]="contact === selectedContact">
+                <span>{{contact.firstname}} {{contact.lastname}}</span>
+            </li>
+        </ul>
+        <button routerLink="/contacts/new">New Contact</button>
+    </div>
+
+    <div class="flexbox-item" id="detail"
+        *ngIf="selectedContact">
+        <app-contact-detail [contact]="selectedContact"></app-contact-detail>
+    </div>
+
+</div>
