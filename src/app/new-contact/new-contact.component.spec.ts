@@ -40,7 +40,6 @@ describe('NewContactComponent', () => {
   it('should dispatch an addContact action', ()=> {
     const contact = CONTACTS[0];
     store.scannedActions$.subscribe( action => {
-      console.log(action);
       //skipping init action
       if(action.type !== '@ngrx/store/init'){
         expect(action.type).toBe(addContact.type, "Unexpected action type");
